@@ -1,0 +1,6 @@
+obj/
+MyApplication1.VC.opendb
+MyApplication1.sdf
+.vs/
+bin/
+deps/bullet
