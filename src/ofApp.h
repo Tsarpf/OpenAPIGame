@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include <iostream>
 #include "btBulletDynamicsCommon.h"
+#include "of3dPrimitives.h"
 
 class ofApp : public ofBaseApp{
 	private:
@@ -13,6 +14,18 @@ class ofApp : public ofBaseApp{
 		btSequentialImpulseConstraintSolver* m_solver;
 		btDiscreteDynamicsWorld* m_dynamicsWorld;
 
+		btCollisionShape* m_fallShape;
+		btCollisionShape* m_groundShape;
+		
+		btRigidBody* m_groundRigidBody;
+		btRigidBody* m_fallRigidBody;
+
+		ofSpherePrimitive m_sphere;
+
+		ofEasyCam m_camera;
+
+		const float m_sphereSize = 50;
+		const float m_sphereYPos = 300;
 
 	public:
 		ofApp();
